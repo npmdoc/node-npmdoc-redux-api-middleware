@@ -1,0 +1,20 @@
+<svg height="270" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="270" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">7 megabytes</tspan>
+<tspan x="10" y="42">└─┬ redux-api-middleware@1.0.2 </tspan>
+<tspan x="10" y="58">  ├─┬ babel-runtime@5.8.38 </tspan>
+<tspan x="10" y="74">  │ └── core-js@1.2.7 </tspan>
+<tspan x="10" y="90">  ├─┬ isomorphic-fetch@2.2.1 </tspan>
+<tspan x="10" y="106">  │ ├─┬ node-fetch@1.6.3 </tspan>
+<tspan x="10" y="122">  │ │ ├─┬ encoding@0.1.12 </tspan>
+<tspan x="10" y="138">  │ │ │ └── iconv-lite@0.4.15 </tspan>
+<tspan x="10" y="154">  │ │ └── is-stream@1.1.0 </tspan>
+<tspan x="10" y="170">  │ └── whatwg-fetch@2.0.3 </tspan>
+<tspan x="10" y="186">  └─┬ lodash.isplainobject@3.2.0 </tspan>
+<tspan x="10" y="202">    ├── lodash._basefor@3.0.3 </tspan>
+<tspan x="10" y="218">    ├── lodash.isarguments@3.1.0 </tspan>
+<tspan x="10" y="234">    └─┬ lodash.keysin@3.0.8 </tspan>
+<tspan x="10" y="250">      └── lodash.isarray@3.0.4</tspan>
+</text>
+</svg>

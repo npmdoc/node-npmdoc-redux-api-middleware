@@ -1,0 +1,1505 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/agraboso/redux-api-middleware">redux-api-middleware (v1.0.2)</a>
+</h1>
+<h4>Redux middleware for calling an API.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-api-middleware">module redux-api-middleware</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-api-middleware.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.ApiError">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>ApiError
+            <span class="apidocSignatureSpan">(status, statusText, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.InternalError">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>InternalError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.InvalidRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>InvalidRSAA
+            <span class="apidocSignatureSpan">(validationErrors)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.RequestError">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>RequestError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.apiMiddleware">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>apiMiddleware
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.getJSON">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>getJSON
+            <span class="apidocSignatureSpan">(res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.isRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>isRSAA
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.isValidRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>isValidRSAA
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.validateRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.</span>validateRSAA
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-api-middleware.</span>errors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-api-middleware.</span>middleware</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-api-middleware.</span>util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-api-middleware.</span>validation</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">symbol <span class="apidocSignatureSpan">redux-api-middleware.</span>CALL_API</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-api-middleware.errors">module redux-api-middleware.errors</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.errors.ApiError">
+            function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>ApiError
+            <span class="apidocSignatureSpan">(status, statusText, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.errors.InternalError">
+            function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>InternalError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.errors.InvalidRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>InvalidRSAA
+            <span class="apidocSignatureSpan">(validationErrors)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.errors.RequestError">
+            function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>RequestError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-api-middleware.middleware">module redux-api-middleware.middleware</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-api-middleware.middleware.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.middleware.apiMiddleware">
+            function <span class="apidocSignatureSpan">redux-api-middleware.middleware.</span>apiMiddleware
+            <span class="apidocSignatureSpan">(_ref)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-api-middleware.util">module redux-api-middleware.util</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-api-middleware.util.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.util.actionWith">
+            function <span class="apidocSignatureSpan">redux-api-middleware.util.</span>actionWith
+            <span class="apidocSignatureSpan">(descriptor, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.util.getJSON">
+            function <span class="apidocSignatureSpan">redux-api-middleware.util.</span>getJSON
+            <span class="apidocSignatureSpan">(res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.util.normalizeTypeDescriptors">
+            function <span class="apidocSignatureSpan">redux-api-middleware.util.</span>normalizeTypeDescriptors
+            <span class="apidocSignatureSpan">(types)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-api-middleware.validation">module redux-api-middleware.validation</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.validation.isRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>isRSAA
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.validation.isValidRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>isValidRSAA
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.validation.isValidTypeDescriptor">
+            function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>isValidTypeDescriptor
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-api-middleware.validation.validateRSAA">
+            function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>validateRSAA
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-api-middleware" id="apidoc.module.redux-api-middleware">module redux-api-middleware</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.ApiError" id="apidoc.element.redux-api-middleware.ApiError">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>ApiError
+        <span class="apidocSignatureSpan">(status, statusText, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiError(status, statusText, response) {
+  _classCallCheck(this, ApiError);
+
+  _Error4.call(this);
+  this.name = 'ApiError';
+  this.status = status;
+  this.statusText = statusText;
+  this.response = response;
+  this.message = status + ' - ' + statusText;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (typeof failureType === 'string' || typeof failureType === 'symbol') {
+    failureType = { type: failureType };
+  }
+  failureType = _extends({
+    payload: function payload(action, state, res) {
+      return getJSON(res).then(function (json) {
+        return new _errors.<span class="apidocCodeKeywordSpan">ApiError</span>(res.status, res.statusText, json);
+      });
+    }
+  }, failureType);
+
+  return [requestType, successType, failureType];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.InternalError" id="apidoc.element.redux-api-middleware.InternalError">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>InternalError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalError(message) {
+  _classCallCheck(this, InternalError);
+
+  _Error2.call(this);
+  this.name = 'InternalError';
+  this.message = message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  context$1$0.next = 10;
+  break;
+
+case 6:
+  context$1$0.prev = 6;
+  context$1$0.t0 = context$1$0['catch'](0);
+
+  descriptor.payload = new _errors.<span class="apidocCodeKeywordSpan">InternalError</span>(context$1$0.t0.message);
+  descriptor.error = true;
+
+case 10:
+  context$1$0.prev = 10;
+  context$1$0.next = 13;
+  return _regeneratorRuntime.awrap(typeof descriptor.meta === 'function' ? descriptor.meta.apply(descriptor, args) : descriptor
+.meta);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.InvalidRSAA" id="apidoc.element.redux-api-middleware.InvalidRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>InvalidRSAA
+        <span class="apidocSignatureSpan">(validationErrors)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InvalidRSAA(validationErrors) {
+  _classCallCheck(this, InvalidRSAA);
+
+  _Error.call(this);
+  this.name = 'InvalidRSAA';
+  this.message = 'Invalid RSAA';
+  this.validationErrors = validationErrors;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _requestType = _callAPI.types[0];
+
+    if (_requestType &amp;&amp; _requestType.type) {
+      _requestType = _requestType.type;
+    }
+    next({
+      type: _requestType,
+      payload: new _errors.<span class="apidocCodeKeywordSpan">InvalidRSAA</span>(validationErrors),
+      error: true
+    });
+  }
+  return context$3$0.abrupt('return');
+
+case 7:
+  callAPI = action[_CALL_API2['default']];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.RequestError" id="apidoc.element.redux-api-middleware.RequestError">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>RequestError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RequestError(message) {
+  _classCallCheck(this, RequestError);
+
+  _Error3.call(this);
+  this.name = 'RequestError';
+  this.message = message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  break;
+
+case 24:
+  context$3$0.prev = 24;
+  context$3$0.t0 = context$3$0['catch'](19);
+  context$3$0.next = 28;
+  return _regeneratorRuntime.awrap(_util.actionWith(_extends({}, requestType, {
+    payload: new _errors.<span class="apidocCodeKeywordSpan">RequestError</span>('[CALL_API].bailout function failed'),
+    error: true
+  }), [action, getState()]));
+
+case 28:
+  context$3$0.t1 = context$3$0.sent;
+  return context$3$0.abrupt('return', next(context$3$0.t1));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.apiMiddleware" id="apidoc.element.redux-api-middleware.apiMiddleware">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>apiMiddleware
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function apiMiddleware(_ref) {
+  var _this = this;
+
+  var getState = _ref.getState;
+
+  return function (next) {
+    return function callee$2$0(action) {
+      var validationErrors, _callAPI, _requestType, callAPI, endpoint, headers, method, body, credentials, bailout, types, _normalizeTypeDescriptors
+, requestType, successType, failureType, res;
+
+      return _regeneratorRuntime.async(function callee$2$0$(context$3$0) {
+        while (1) switch (context$3$0.prev = context$3$0.next) {
+          case 0:
+            if (_validation.isRSAA(action)) {
+              context$3$0.next = 2;
+              break;
+            }
+
+            return context$3$0.abrupt('return', next(action));
+
+          case 2:
+            validationErrors = _validation.validateRSAA(action);
+
+            if (!validationErrors.length) {
+              context$3$0.next = 7;
+              break;
+            }
+
+            _callAPI = action[_CALL_API2['default']];
+
+            if (_callAPI.types &amp;&amp; Array.isArray(_callAPI.types)) {
+              _requestType = _callAPI.types[0];
+
+              if (_requestType &amp;&amp; _requestType.type) {
+                _requestType = _requestType.type;
+              }
+              next({
+                type: _requestType,
+                payload: new _errors.InvalidRSAA(validationErrors),
+                error: true
+              });
+            }
+            return context$3$0.abrupt('return');
+
+          case 7:
+            callAPI = action[_CALL_API2['default']];
+            endpoint = callAPI.endpoint;
+            headers = callAPI.headers;
+            method = callAPI.method;
+            body = callAPI.body;
+            credentials = callAPI.credentials;
+            bailout = callAPI.bailout;
+            types = callAPI.types;
+            _normalizeTypeDescriptors = _util.normalizeTypeDescriptors(types);
+            requestType = _normalizeTypeDescriptors[0];
+            successType = _normalizeTypeDescriptors[1];
+            failureType = _normalizeTypeDescriptors[2];
+            context$3$0.prev = 19;
+
+            if (!(typeof bailout === 'boolean' &amp;&amp; bailout || typeof bailout === 'function' &amp;&amp; bailout(getState()))) {
+              context$3$0.next = 22;
+              break;
+            }
+
+            return context$3$0.abrupt('return');
+
+          case 22:
+            context$3$0.next = 30;
+            break;
+
+          case 24:
+            context$3$0.prev = 24;
+            context$3$0.t0 = context$3$0['catch'](19);
+            context$3$0.next = 28;
+            return _regeneratorRuntime.awrap(_util.actionWith(_extends({}, requestType, {
+              payload: new _errors.RequestError('[CALL_API].bailout function failed'),
+              error: true
+            }), [action, getState()]));
+
+          case 28:
+            context$3$0.t1 = context$3$0.sent;
+            return context$3$0.abrupt('return', next(context$3$0.t1));
+
+          case 30:
+            if (!(typeof endpoint === 'function')) {
+              context$3$0.next = 41;
+              break;
+            }
+
+            context$3$0.prev = 31;
+
+            endpoint = endpoint(getState());
+            context$3$0.next = 41;
+            break;
+
+          case 35:
+            context$3$0.prev = 35;
+            context$3$0.t2 = context$3$0['catch'](31);
+            context$3$0.next = 39;
+            return _regeneratorRuntime.awrap(_util.actionWith(_extends({}, requestType, {
+              payload: new _errors.RequestError('[CALL_API].endpoint function failed'),
+              error: true
+            }), [action, getState()]));
+
+          case 39:
+            context$3$0.t3 = context$3$0.sent;
+            return context$3$0.abrupt('return', next(context$3$0.t3));
+
+          case 41:
+            if (!(typeof headers === 'function')) {
+              context$3$0.next = 52;
+              break;
+            }
+
+            context$3$0.prev = 42;
+
+            headers = headers(getState());
+            context$3$0.next = 52;
+            break;
+
+          case 46:
+            context$3$0.prev = 46;
+            context$3$0.t4 = context$3$0['catch'](42);
+            context ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.getJSON" id="apidoc.element.redux-api-middleware.getJSON">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>getJSON
+        <span class="apidocSignatureSpan">(res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getJSON(res) {
+  var contentType, emptyCodes;
+  return _regeneratorRuntime.async(function getJSON$(context$1$0) {
+    while (1) switch (context$1$0.prev = context$1$0.next) {
+      case 0:
+        contentType = res.headers.get('Content-Type');
+        emptyCodes = [204, 205];
+
+        if (!(! ~emptyCodes.indexOf(res.status) &amp;&amp; contentType &amp;&amp; ~contentType.indexOf('json'))) {
+          context$1$0.next = 8;
+          break;
+        }
+
+        context$1$0.next = 5;
+        return _regeneratorRuntime.awrap(res.json());
+
+      case 5:
+        return context$1$0.abrupt('return', context$1$0.sent);
+
+      case 8:
+        context$1$0.next = 10;
+        return _regeneratorRuntime.awrap(_Promise.resolve());
+
+      case 10:
+        return context$1$0.abrupt('return', context$1$0.sent);
+
+      case 11:
+      case 'end':
+        return context$1$0.stop();
+    }
+  }, null, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.isRSAA" id="apidoc.element.redux-api-middleware.isRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>isRSAA
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isRSAA(action) {
+  return _lodashIsplainobject2['default'](action) &amp;&amp; action.hasOwnProperty(_CALL_API2['default']);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return function (next) {
+    return function callee$2$0(action) {
+      var validationErrors, _callAPI, _requestType, callAPI, endpoint, headers, method, body, credentials, bailout, types, _normalizeTypeDescriptors
+, requestType, successType, failureType, res;
+
+      return _regeneratorRuntime.async(function callee$2$0$(context$3$0) {
+        while (1) switch (context$3$0.prev = context$3$0.next) {
+case 0:
+  if (_validation.<span class="apidocCodeKeywordSpan">isRSAA</span>(action)) {
+    context$3$0.next = 2;
+    break;
+  }
+
+  return context$3$0.abrupt('return', next(action));
+
+case 2:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.isValidRSAA" id="apidoc.element.redux-api-middleware.isValidRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>isValidRSAA
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValidRSAA(action) {
+  return !validateRSAA(action).length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.validateRSAA" id="apidoc.element.redux-api-middleware.validateRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.</span>validateRSAA
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateRSAA(action) {
+  var validationErrors = [];
+  var validCallAPIKeys = ['endpoint', 'method', 'body', 'headers', 'credentials', 'bailout', 'types'];
+  var validMethods = ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'];
+  var validCredentials = ['omit', 'same-origin', 'include'];
+
+  if (!isRSAA(action)) {
+    validationErrors.push('RSAAs must be plain JavaScript objects with a [CALL_API] property');
+    return validationErrors;
+  }
+
+  for (var key in action) {
+    if (key !== [_CALL_API2['default']]) {
+      validationErrors.push('Invalid root key: ' + key);
+    }
+  }
+
+  var callAPI = action[_CALL_API2['default']];
+  if (!_lodashIsplainobject2['default'](callAPI)) {
+    validationErrors.push('[CALL_API] property must be a plain JavaScript object');
+  }
+  for (var key in callAPI) {
+    if (! ~validCallAPIKeys.indexOf(key)) {
+      validationErrors.push('Invalid [CALL_API] key: ' + key);
+    }
+  }
+
+  var endpoint = callAPI.endpoint;
+  var method = callAPI.method;
+  var headers = callAPI.headers;
+  var credentials = callAPI.credentials;
+  var types = callAPI.types;
+  var bailout = callAPI.bailout;
+
+  if (typeof endpoint === 'undefined') {
+    validationErrors.push('[CALL_API] must have an endpoint property');
+  } else if (typeof endpoint !== 'string' &amp;&amp; typeof endpoint !== 'function') {
+    validationErrors.push('[CALL_API].endpoint property must be a string or a function');
+  }
+  if (typeof method === 'undefined') {
+    validationErrors.push('[CALL_API] must have a method property');
+  } else if (typeof method !== 'string') {
+    validationErrors.push('[CALL_API].method property must be a string');
+  } else if (! ~validMethods.indexOf(method.toUpperCase())) {
+    validationErrors.push('Invalid [CALL_API].method: ' + method.toUpperCase());
+  }
+
+  if (typeof headers !== 'undefined' &amp;&amp; !_lodashIsplainobject2['default'](headers) &amp;&amp; typeof headers !== 'function') {
+    validationErrors.push('[CALL_API].headers property must be undefined, a plain JavaScript object, or a function');
+  }
+  if (typeof credentials !== 'undefined') {
+    if (typeof credentials !== 'string') {
+      validationErrors.push('[CALL_API].credentials property must be undefined, or a string');
+    } else if (! ~validCredentials.indexOf(credentials)) {
+      validationErrors.push('Invalid [CALL_API].credentials: ' + credentials);
+    }
+  }
+  if (typeof bailout !== 'undefined' &amp;&amp; typeof bailout !== 'boolean' &amp;&amp; typeof bailout !== 'function') {
+    validationErrors.push('[CALL_API].bailout property must be undefined, a boolean, or a function');
+  }
+
+  if (typeof types === 'undefined') {
+    validationErrors.push('[CALL_API] must have a types property');
+  } else if (!Array.isArray(types) || types.length !== 3) {
+    validationErrors.push('[CALL_API].types property must be an array of length 3');
+  } else {
+    var requestType = types[0];
+    var successType = types[1];
+    var failureType = types[2];
+
+    if (typeof requestType !== 'string' &amp;&amp; typeof requestType !== 'symbol' &amp;&amp; !isValidTypeDescriptor(requestType)) {
+      validationErrors.push('Invalid request type');
+    }
+    if (typeof successType !== 'string' &amp;&amp; typeof successType !== 'symbol' &amp;&amp; !isValidTypeDescriptor(successType)) {
+      validationErrors.push('Invalid success type');
+    }
+    if (typeof failureType !== 'string' &amp;&amp; typeof failureType !== 'symbol' &amp;&amp; !isValidTypeDescriptor(failureType)) {
+      validationErrors.push('Invalid failure type');
+    }
+  }
+
+  return validationErrors;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  context$3$0.next = 2;
+  break;
+}
+
+return context$3$0.abrupt('return', next(action));
+
+          case 2:
+validationErrors = _validation.<span class="apidocCodeKeywordSpan">validateRSAA</span>(action);
+
+if (!validationErrors.length) {
+  context$3$0.next = 7;
+  break;
+}
+
+_callAPI = action[_CALL_API2['default']];
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-api-middleware.errors" id="apidoc.module.redux-api-middleware.errors">module redux-api-middleware.errors</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.errors.ApiError" id="apidoc.element.redux-api-middleware.errors.ApiError">
+        function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>ApiError
+        <span class="apidocSignatureSpan">(status, statusText, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApiError(status, statusText, response) {
+  _classCallCheck(this, ApiError);
+
+  _Error4.call(this);
+  this.name = 'ApiError';
+  this.status = status;
+  this.statusText = statusText;
+  this.response = response;
+  this.message = status + ' - ' + statusText;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  if (typeof failureType === 'string' || typeof failureType === 'symbol') {
+    failureType = { type: failureType };
+  }
+  failureType = _extends({
+    payload: function payload(action, state, res) {
+      return getJSON(res).then(function (json) {
+        return new _errors.<span class="apidocCodeKeywordSpan">ApiError</span>(res.status, res.statusText, json);
+      });
+    }
+  }, failureType);
+
+  return [requestType, successType, failureType];
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.errors.InternalError" id="apidoc.element.redux-api-middleware.errors.InternalError">
+        function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>InternalError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InternalError(message) {
+  _classCallCheck(this, InternalError);
+
+  _Error2.call(this);
+  this.name = 'InternalError';
+  this.message = message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  context$1$0.next = 10;
+  break;
+
+case 6:
+  context$1$0.prev = 6;
+  context$1$0.t0 = context$1$0['catch'](0);
+
+  descriptor.payload = new _errors.<span class="apidocCodeKeywordSpan">InternalError</span>(context$1$0.t0.message);
+  descriptor.error = true;
+
+case 10:
+  context$1$0.prev = 10;
+  context$1$0.next = 13;
+  return _regeneratorRuntime.awrap(typeof descriptor.meta === 'function' ? descriptor.meta.apply(descriptor, args) : descriptor
+.meta);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.errors.InvalidRSAA" id="apidoc.element.redux-api-middleware.errors.InvalidRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>InvalidRSAA
+        <span class="apidocSignatureSpan">(validationErrors)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InvalidRSAA(validationErrors) {
+  _classCallCheck(this, InvalidRSAA);
+
+  _Error.call(this);
+  this.name = 'InvalidRSAA';
+  this.message = 'Invalid RSAA';
+  this.validationErrors = validationErrors;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    _requestType = _callAPI.types[0];
+
+    if (_requestType &amp;&amp; _requestType.type) {
+      _requestType = _requestType.type;
+    }
+    next({
+      type: _requestType,
+      payload: new _errors.<span class="apidocCodeKeywordSpan">InvalidRSAA</span>(validationErrors),
+      error: true
+    });
+  }
+  return context$3$0.abrupt('return');
+
+case 7:
+  callAPI = action[_CALL_API2['default']];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.errors.RequestError" id="apidoc.element.redux-api-middleware.errors.RequestError">
+        function <span class="apidocSignatureSpan">redux-api-middleware.errors.</span>RequestError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RequestError(message) {
+  _classCallCheck(this, RequestError);
+
+  _Error3.call(this);
+  this.name = 'RequestError';
+  this.message = message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  break;
+
+case 24:
+  context$3$0.prev = 24;
+  context$3$0.t0 = context$3$0['catch'](19);
+  context$3$0.next = 28;
+  return _regeneratorRuntime.awrap(_util.actionWith(_extends({}, requestType, {
+    payload: new _errors.<span class="apidocCodeKeywordSpan">RequestError</span>('[CALL_API].bailout function failed'),
+    error: true
+  }), [action, getState()]));
+
+case 28:
+  context$3$0.t1 = context$3$0.sent;
+  return context$3$0.abrupt('return', next(context$3$0.t1));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-api-middleware.middleware" id="apidoc.module.redux-api-middleware.middleware">module redux-api-middleware.middleware</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.middleware.apiMiddleware" id="apidoc.element.redux-api-middleware.middleware.apiMiddleware">
+        function <span class="apidocSignatureSpan">redux-api-middleware.middleware.</span>apiMiddleware
+        <span class="apidocSignatureSpan">(_ref)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function apiMiddleware(_ref) {
+  var _this = this;
+
+  var getState = _ref.getState;
+
+  return function (next) {
+    return function callee$2$0(action) {
+      var validationErrors, _callAPI, _requestType, callAPI, endpoint, headers, method, body, credentials, bailout, types, _normalizeTypeDescriptors
+, requestType, successType, failureType, res;
+
+      return _regeneratorRuntime.async(function callee$2$0$(context$3$0) {
+        while (1) switch (context$3$0.prev = context$3$0.next) {
+          case 0:
+            if (_validation.isRSAA(action)) {
+              context$3$0.next = 2;
+              break;
+            }
+
+            return context$3$0.abrupt('return', next(action));
+
+          case 2:
+            validationErrors = _validation.validateRSAA(action);
+
+            if (!validationErrors.length) {
+              context$3$0.next = 7;
+              break;
+            }
+
+            _callAPI = action[_CALL_API2['default']];
+
+            if (_callAPI.types &amp;&amp; Array.isArray(_callAPI.types)) {
+              _requestType = _callAPI.types[0];
+
+              if (_requestType &amp;&amp; _requestType.type) {
+                _requestType = _requestType.type;
+              }
+              next({
+                type: _requestType,
+                payload: new _errors.InvalidRSAA(validationErrors),
+                error: true
+              });
+            }
+            return context$3$0.abrupt('return');
+
+          case 7:
+            callAPI = action[_CALL_API2['default']];
+            endpoint = callAPI.endpoint;
+            headers = callAPI.headers;
+            method = callAPI.method;
+            body = callAPI.body;
+            credentials = callAPI.credentials;
+            bailout = callAPI.bailout;
+            types = callAPI.types;
+            _normalizeTypeDescriptors = _util.normalizeTypeDescriptors(types);
+            requestType = _normalizeTypeDescriptors[0];
+            successType = _normalizeTypeDescriptors[1];
+            failureType = _normalizeTypeDescriptors[2];
+            context$3$0.prev = 19;
+
+            if (!(typeof bailout === 'boolean' &amp;&amp; bailout || typeof bailout === 'function' &amp;&amp; bailout(getState()))) {
+              context$3$0.next = 22;
+              break;
+            }
+
+            return context$3$0.abrupt('return');
+
+          case 22:
+            context$3$0.next = 30;
+            break;
+
+          case 24:
+            context$3$0.prev = 24;
+            context$3$0.t0 = context$3$0['catch'](19);
+            context$3$0.next = 28;
+            return _regeneratorRuntime.awrap(_util.actionWith(_extends({}, requestType, {
+              payload: new _errors.RequestError('[CALL_API].bailout function failed'),
+              error: true
+            }), [action, getState()]));
+
+          case 28:
+            context$3$0.t1 = context$3$0.sent;
+            return context$3$0.abrupt('return', next(context$3$0.t1));
+
+          case 30:
+            if (!(typeof endpoint === 'function')) {
+              context$3$0.next = 41;
+              break;
+            }
+
+            context$3$0.prev = 31;
+
+            endpoint = endpoint(getState());
+            context$3$0.next = 41;
+            break;
+
+          case 35:
+            context$3$0.prev = 35;
+            context$3$0.t2 = context$3$0['catch'](31);
+            context$3$0.next = 39;
+            return _regeneratorRuntime.awrap(_util.actionWith(_extends({}, requestType, {
+              payload: new _errors.RequestError('[CALL_API].endpoint function failed'),
+              error: true
+            }), [action, getState()]));
+
+          case 39:
+            context$3$0.t3 = context$3$0.sent;
+            return context$3$0.abrupt('return', next(context$3$0.t3));
+
+          case 41:
+            if (!(typeof headers === 'function')) {
+              context$3$0.next = 52;
+              break;
+            }
+
+            context$3$0.prev = 42;
+
+            headers = headers(getState());
+            context$3$0.next = 52;
+            break;
+
+          case 46:
+            context$3$0.prev = 46;
+            context$3$0.t4 = context$3$0['catch'](42);
+            context ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-api-middleware.util" id="apidoc.module.redux-api-middleware.util">module redux-api-middleware.util</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.util.actionWith" id="apidoc.element.redux-api-middleware.util.actionWith">
+        function <span class="apidocSignatureSpan">redux-api-middleware.util.</span>actionWith
+        <span class="apidocSignatureSpan">(descriptor, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function actionWith(descriptor, args) {
+  return _regeneratorRuntime.async(function actionWith$(context$1$0) {
+    while (1) switch (context$1$0.prev = context$1$0.next) {
+      case 0:
+        context$1$0.prev = 0;
+        context$1$0.next = 3;
+        return _regeneratorRuntime.awrap(typeof descriptor.payload === 'function' ? descriptor.payload.apply(descriptor, args) :
+descriptor.payload);
+
+      case 3:
+        descriptor.payload = context$1$0.sent;
+        context$1$0.next = 10;
+        break;
+
+      case 6:
+        context$1$0.prev = 6;
+        context$1$0.t0 = context$1$0['catch'](0);
+
+        descriptor.payload = new _errors.InternalError(context$1$0.t0.message);
+        descriptor.error = true;
+
+      case 10:
+        context$1$0.prev = 10;
+        context$1$0.next = 13;
+        return _regeneratorRuntime.awrap(typeof descriptor.meta === 'function' ? descriptor.meta.apply(descriptor, args) : descriptor
+.meta);
+
+      case 13:
+        descriptor.meta = context$1$0.sent;
+        context$1$0.next = 21;
+        break;
+
+      case 16:
+        context$1$0.prev = 16;
+        context$1$0.t1 = context$1$0['catch'](10);
+
+        delete descriptor.meta;
+        descriptor.payload = new _errors.InternalError(context$1$0.t1.message);
+        descriptor.error = true;
+
+      case 21:
+        return context$1$0.abrupt('return', descriptor);
+
+      case 22:
+      case 'end':
+        return context$1$0.stop();
+    }
+  }, null, this, [[0, 6], [10, 16]]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  context$3$0.next = 30;
+  break;
+
+case 24:
+  context$3$0.prev = 24;
+  context$3$0.t0 = context$3$0['catch'](19);
+  context$3$0.next = 28;
+  return _regeneratorRuntime.awrap(_util.<span class="apidocCodeKeywordSpan">actionWith</span>(_extends({}, requestType, {
+    payload: new _errors.RequestError('[CALL_API].bailout function failed'),
+    error: true
+  }), [action, getState()]));
+
+case 28:
+  context$3$0.t1 = context$3$0.sent;
+  return context$3$0.abrupt('return', next(context$3$0.t1));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.util.getJSON" id="apidoc.element.redux-api-middleware.util.getJSON">
+        function <span class="apidocSignatureSpan">redux-api-middleware.util.</span>getJSON
+        <span class="apidocSignatureSpan">(res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getJSON(res) {
+  var contentType, emptyCodes;
+  return _regeneratorRuntime.async(function getJSON$(context$1$0) {
+    while (1) switch (context$1$0.prev = context$1$0.next) {
+      case 0:
+        contentType = res.headers.get('Content-Type');
+        emptyCodes = [204, 205];
+
+        if (!(! ~emptyCodes.indexOf(res.status) &amp;&amp; contentType &amp;&amp; ~contentType.indexOf('json'))) {
+          context$1$0.next = 8;
+          break;
+        }
+
+        context$1$0.next = 5;
+        return _regeneratorRuntime.awrap(res.json());
+
+      case 5:
+        return context$1$0.abrupt('return', context$1$0.sent);
+
+      case 8:
+        context$1$0.next = 10;
+        return _regeneratorRuntime.awrap(_Promise.resolve());
+
+      case 10:
+        return context$1$0.abrupt('return', context$1$0.sent);
+
+      case 11:
+      case 'end':
+        return context$1$0.stop();
+    }
+  }, null, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.util.normalizeTypeDescriptors" id="apidoc.element.redux-api-middleware.util.normalizeTypeDescriptors">
+        function <span class="apidocSignatureSpan">redux-api-middleware.util.</span>normalizeTypeDescriptors
+        <span class="apidocSignatureSpan">(types)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizeTypeDescriptors(types) {
+  var requestType = types[0];
+  var successType = types[1];
+  var failureType = types[2];
+
+  if (typeof requestType === 'string' || typeof requestType === 'symbol') {
+    requestType = { type: requestType };
+  }
+
+  if (typeof successType === 'string' || typeof successType === 'symbol') {
+    successType = { type: successType };
+  }
+  successType = _extends({
+    payload: function payload(action, state, res) {
+      return getJSON(res);
+    }
+  }, successType);
+
+  if (typeof failureType === 'string' || typeof failureType === 'symbol') {
+    failureType = { type: failureType };
+  }
+  failureType = _extends({
+    payload: function payload(action, state, res) {
+      return getJSON(res).then(function (json) {
+        return new _errors.ApiError(res.status, res.statusText, json);
+      });
+    }
+  }, failureType);
+
+  return [requestType, successType, failureType];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+endpoint = callAPI.endpoint;
+headers = callAPI.headers;
+method = callAPI.method;
+body = callAPI.body;
+credentials = callAPI.credentials;
+bailout = callAPI.bailout;
+types = callAPI.types;
+_normalizeTypeDescriptors = _util.<span class="apidocCodeKeywordSpan">normalizeTypeDescriptors</span>(types);
+requestType = _normalizeTypeDescriptors[0];
+successType = _normalizeTypeDescriptors[1];
+failureType = _normalizeTypeDescriptors[2];
+context$3$0.prev = 19;
+
+if (!(typeof bailout === 'boolean' &amp;&amp; bailout || typeof bailout === 'function' &amp;&amp; bailout
+(getState()))) {
+  context$3$0.next = 22;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-api-middleware.validation" id="apidoc.module.redux-api-middleware.validation">module redux-api-middleware.validation</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.validation.isRSAA" id="apidoc.element.redux-api-middleware.validation.isRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>isRSAA
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isRSAA(action) {
+  return _lodashIsplainobject2['default'](action) &amp;&amp; action.hasOwnProperty(_CALL_API2['default']);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return function (next) {
+    return function callee$2$0(action) {
+      var validationErrors, _callAPI, _requestType, callAPI, endpoint, headers, method, body, credentials, bailout, types, _normalizeTypeDescriptors
+, requestType, successType, failureType, res;
+
+      return _regeneratorRuntime.async(function callee$2$0$(context$3$0) {
+        while (1) switch (context$3$0.prev = context$3$0.next) {
+case 0:
+  if (_validation.<span class="apidocCodeKeywordSpan">isRSAA</span>(action)) {
+    context$3$0.next = 2;
+    break;
+  }
+
+  return context$3$0.abrupt('return', next(action));
+
+case 2:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.validation.isValidRSAA" id="apidoc.element.redux-api-middleware.validation.isValidRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>isValidRSAA
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValidRSAA(action) {
+  return !validateRSAA(action).length;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.validation.isValidTypeDescriptor" id="apidoc.element.redux-api-middleware.validation.isValidTypeDescriptor">
+        function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>isValidTypeDescriptor
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isValidTypeDescriptor(obj) {
+  var validKeys = ['type', 'payload', 'meta'];
+
+  if (!_lodashIsplainobject2['default'](obj)) {
+    return false;
+  }
+  for (var key in obj) {
+    if (! ~validKeys.indexOf(key)) {
+      return false;
+    }
+  }
+  if (!('type' in obj)) {
+    return false;
+  } else if (typeof obj.type !== 'string' &amp;&amp; typeof obj.type !== 'symbol') {
+    return false;
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-api-middleware.validation.validateRSAA" id="apidoc.element.redux-api-middleware.validation.validateRSAA">
+        function <span class="apidocSignatureSpan">redux-api-middleware.validation.</span>validateRSAA
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateRSAA(action) {
+  var validationErrors = [];
+  var validCallAPIKeys = ['endpoint', 'method', 'body', 'headers', 'credentials', 'bailout', 'types'];
+  var validMethods = ['GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'];
+  var validCredentials = ['omit', 'same-origin', 'include'];
+
+  if (!isRSAA(action)) {
+    validationErrors.push('RSAAs must be plain JavaScript objects with a [CALL_API] property');
+    return validationErrors;
+  }
+
+  for (var key in action) {
+    if (key !== [_CALL_API2['default']]) {
+      validationErrors.push('Invalid root key: ' + key);
+    }
+  }
+
+  var callAPI = action[_CALL_API2['default']];
+  if (!_lodashIsplainobject2['default'](callAPI)) {
+    validationErrors.push('[CALL_API] property must be a plain JavaScript object');
+  }
+  for (var key in callAPI) {
+    if (! ~validCallAPIKeys.indexOf(key)) {
+      validationErrors.push('Invalid [CALL_API] key: ' + key);
+    }
+  }
+
+  var endpoint = callAPI.endpoint;
+  var method = callAPI.method;
+  var headers = callAPI.headers;
+  var credentials = callAPI.credentials;
+  var types = callAPI.types;
+  var bailout = callAPI.bailout;
+
+  if (typeof endpoint === 'undefined') {
+    validationErrors.push('[CALL_API] must have an endpoint property');
+  } else if (typeof endpoint !== 'string' &amp;&amp; typeof endpoint !== 'function') {
+    validationErrors.push('[CALL_API].endpoint property must be a string or a function');
+  }
+  if (typeof method === 'undefined') {
+    validationErrors.push('[CALL_API] must have a method property');
+  } else if (typeof method !== 'string') {
+    validationErrors.push('[CALL_API].method property must be a string');
+  } else if (! ~validMethods.indexOf(method.toUpperCase())) {
+    validationErrors.push('Invalid [CALL_API].method: ' + method.toUpperCase());
+  }
+
+  if (typeof headers !== 'undefined' &amp;&amp; !_lodashIsplainobject2['default'](headers) &amp;&amp; typeof headers !== 'function') {
+    validationErrors.push('[CALL_API].headers property must be undefined, a plain JavaScript object, or a function');
+  }
+  if (typeof credentials !== 'undefined') {
+    if (typeof credentials !== 'string') {
+      validationErrors.push('[CALL_API].credentials property must be undefined, or a string');
+    } else if (! ~validCredentials.indexOf(credentials)) {
+      validationErrors.push('Invalid [CALL_API].credentials: ' + credentials);
+    }
+  }
+  if (typeof bailout !== 'undefined' &amp;&amp; typeof bailout !== 'boolean' &amp;&amp; typeof bailout !== 'function') {
+    validationErrors.push('[CALL_API].bailout property must be undefined, a boolean, or a function');
+  }
+
+  if (typeof types === 'undefined') {
+    validationErrors.push('[CALL_API] must have a types property');
+  } else if (!Array.isArray(types) || types.length !== 3) {
+    validationErrors.push('[CALL_API].types property must be an array of length 3');
+  } else {
+    var requestType = types[0];
+    var successType = types[1];
+    var failureType = types[2];
+
+    if (typeof requestType !== 'string' &amp;&amp; typeof requestType !== 'symbol' &amp;&amp; !isValidTypeDescriptor(requestType)) {
+      validationErrors.push('Invalid request type');
+    }
+    if (typeof successType !== 'string' &amp;&amp; typeof successType !== 'symbol' &amp;&amp; !isValidTypeDescriptor(successType)) {
+      validationErrors.push('Invalid success type');
+    }
+    if (typeof failureType !== 'string' &amp;&amp; typeof failureType !== 'symbol' &amp;&amp; !isValidTypeDescriptor(failureType)) {
+      validationErrors.push('Invalid failure type');
+    }
+  }
+
+  return validationErrors;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  context$3$0.next = 2;
+  break;
+}
+
+return context$3$0.abrupt('return', next(action));
+
+          case 2:
+validationErrors = _validation.<span class="apidocCodeKeywordSpan">validateRSAA</span>(action);
+
+if (!validationErrors.length) {
+  context$3$0.next = 7;
+  break;
+}
+
+_callAPI = action[_CALL_API2['default']];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
