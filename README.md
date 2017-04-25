@@ -1,6 +1,6 @@
 # npmdoc-redux-api-middleware
 
-#### api documentation for  [redux-api-middleware (v1.0.2)](https://github.com/agraboso/redux-api-middleware)  [![npm package](https://img.shields.io/npm/v/npmdoc-redux-api-middleware.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-redux-api-middleware) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux-api-middleware.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux-api-middleware)
+#### basic api documentation for  [redux-api-middleware (v1.0.2)](https://github.com/agraboso/redux-api-middleware)  [![npm package](https://img.shields.io/npm/v/npmdoc-redux-api-middleware.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-redux-api-middleware) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux-api-middleware.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux-api-middleware)
 
 #### Redux middleware for calling an API.
 
@@ -86,7 +86,8 @@
         "prepublish": "npm run lint && npm test && npm run clean && npm run build",
         "test": "babel-node test/index.js | tap-spec"
     },
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "bin": {}
 }
 ```
 
